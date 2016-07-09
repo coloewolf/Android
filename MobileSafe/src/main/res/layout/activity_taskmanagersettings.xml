@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myspace="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="进程管理设置"
+        style="@style/text_title_style"
+         />
+
+    <com.example.lyl.mobilesafe.view.SettingCheckView
+        android:id="@+id/scv_taskmanagersettings_isshowsysprocess"
+        myspace:bigTitle="显示系统进程"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.lyl.mobilesafe.view.SettingCheckView>
+
+    <com.example.lyl.mobilesafe.view.SettingCheckView
+        android:id="@+id/scv_taskmanagersettings_autokill"
+        myspace:bigTitle="锁屏清理进程"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.lyl.mobilesafe.view.SettingCheckView>
+
+</LinearLayout>

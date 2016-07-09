@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="缓存清理"
+            style="@style/text_title_style"
+            />
+
+        <Button
+            android:onClick="cleanAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清理全部"
+            android:layout_gravity="right|center_vertical" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_cleancache_scanstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progressbar_custom_horizontal"
+            android:id="@+id/pb_cleancache_progress"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_cleancache_status"
+            android:text="正在扫描"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lv_cleancache_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+</LinearLayout>

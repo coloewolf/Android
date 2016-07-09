@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="归属地查询"
+        style="@style/text_title_style"
+         />
+
+    <EditText
+        android:id="@+id/et_number"
+        android:inputType="phone"
+        android:hint="请输入号码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="query"
+        android:text="查询"
+        android:id="@+id/btn_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/text_content_style"
+        android:id="@+id/tv_result"
+        android:text="查询结果:"/>
+
+</LinearLayout>

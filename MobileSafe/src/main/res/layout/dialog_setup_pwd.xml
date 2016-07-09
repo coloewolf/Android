@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="300dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#2266ff00"
+        android:text="设置密码"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:hint="请输入密码"
+        android:id="@+id/et_password"
+        android:inputType="textPassword"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:hint="请再次输入密码"
+        android:id="@+id/et_password_confirm"
+        android:inputType="textPassword"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:background="@drawable/btn_custom"
+            android:text="确定"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_custom"
+            android:text="取消"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

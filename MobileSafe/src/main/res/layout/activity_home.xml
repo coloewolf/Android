@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="25sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="#00d9ff"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="功能列表"
+        android:id="@+id/tv_home_title"
+        android:layout_gravity="center_horizontal" />
+
+    <com.example.lyl.mobilesafe.view.FocusedTextView
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="我是黑马卫士，我时刻保护您手机的安全！！！！！！！！！！！！！！！！！！！！！！！"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <GridView
+        android:numColumns="3"
+        android:id="@+id/gv_home_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </GridView>
+
+</LinearLayout>

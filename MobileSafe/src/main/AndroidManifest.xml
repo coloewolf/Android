@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lyl.mobilesafe">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.DELETE_CACHE_FILES"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+
+    <application
+        android:name=".MobileSafeApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- activity -->
+        <activity android:name=".activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.com.example.lyl.mobilesafe.home" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.HomeActivity"/>
+        <activity android:name=".activities.SettingActivity"/>
+        <activity android:name=".activities.Setup1Activity"/>
+        <activity android:name=".activities.Setup2Activity"/>
+        <activity android:name=".activities.Setup3Activity"/>
+        <activity android:name=".activities.Setup4Activity"/>
+        <activity android:name=".activities.LostFindActivity"/>
+        <activity android:name=".activities.SelectContactsActivity"/>
+        <activity android:name=".activities.CallSmsSafeActivity"/>
+        <activity android:name=".activities.AtoolsActivity" />
+        <activity android:name=".activities.QueryAddressActivity" />
+        <activity android:name=".activities.CommoNumActivity"/>
+        <activity android:name=".activities.AppManagerActivity"/>
+        <activity android:name=".activities.TaskManagerActivity"/>
+        <activity android:name=".activities.TaskManagerSettingsActivity"/>
+        <activity android:name=".activities.AppLockActivity"/>
+        <activity android:name=".activities.EnterPasswordActivty"
+                  android:launchMode="singleInstance"/>
+        <activity android:name=".activities.CleanCacheActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".activities.AntiVirusActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"  />
+
+        <!-- receiver -->
+        <receiver android:name=".Receiver.BootCompeteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.SmsReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephany.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".Receiver.MyAdminReceiver"
+            android:label="@string/app_name"
+            android:description="@string/description"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".widget.MyWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_info"/>
+        </receiver>
+
+        <!-- service -->
+        <service android:name=".service.GpsService"/>
+        <service android:name=".service.CallSmsSafeService" />
+        <service android:name=".service.ShowAddressService"/>
+        <service android:name=".service.AutoKillService"/>
+        <service android:name=".service.WatchDogService"/>
+
+    </application>
+
+</manifest>

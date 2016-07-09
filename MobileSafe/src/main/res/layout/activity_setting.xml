@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myspace="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="25sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="#00d9ff"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置中心"
+        android:id="@+id/tv_home_title"
+        android:layout_gravity="center_horizontal" />
+
+    <com.example.lyl.mobilesafe.view.SettingCheckView
+        android:id="@+id/scv_setting_autoUpdate"
+        android:layout_width="match_parent"
+        myspace:bigTitle="开启自动更新"
+        android:layout_height="wrap_content">
+
+    </com.example.lyl.mobilesafe.view.SettingCheckView>
+
+    <com.example.lyl.mobilesafe.view.SettingCheckView
+        android:id="@+id/scv_setting_blacklist"
+        android:layout_width="match_parent"
+        myspace:bigTitle="开启黑名单拦截"
+        android:layout_height="wrap_content">
+
+    </com.example.lyl.mobilesafe.view.SettingCheckView>
+
+
+    <com.example.lyl.mobilesafe.view.SettingCheckView
+        android:id="@+id/scv_setting_location"
+        android:layout_width="match_parent"
+        myspace:bigTitle="开启号码归属地显示"
+        android:layout_height="wrap_content">
+
+    </com.example.lyl.mobilesafe.view.SettingCheckView>
+
+    <com.example.lyl.mobilesafe.view.SettingChangeView
+        android:id="@+id/scv_change_bg"
+        android:onClick="changeLocationBg"
+        android:clickable="true"
+        myspace:title="归属地提示风格"
+        myspace:desc="颜色"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.lyl.mobilesafe.view.SettingChangeView>
+
+
+    <com.example.lyl.mobilesafe.view.SettingCheckView
+        android:id="@+id/scv_setting_applockwatchdog"
+        android:layout_width="match_parent"
+        myspace:bigTitle="开启程序锁看门狗"
+        android:layout_height="wrap_content">
+
+    </com.example.lyl.mobilesafe.view.SettingCheckView>
+
+
+</LinearLayout>

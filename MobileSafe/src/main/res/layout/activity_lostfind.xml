@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/text_title_style"
+        android:text="手机防盗"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="安全号码"
+            android:layout_width="wrap_content"
+            style="@style/text_content_style"
+             />
+
+        <TextView
+            android:id="@+id/tv_lostfind_phoneNumber"
+            android:paddingRight="16dp"
+            android:gravity="right"
+            android:layout_width="wrap_content"
+            style="@style/text_content_style"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="防盗保护是否开启"
+            android:layout_width="wrap_content"
+            style="@style/text_content_style"
+             />
+
+        <ImageView
+            android:id="@+id/iv_lostfind_status"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/unlock"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:onClick="reEnterSetup"
+            android:clickable="true"
+            android:text="重新进入设置向导"
+            android:layout_width="wrap_content"
+            style="@style/text_content_style"
+            android:id="@+id/textView" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:background="#22000000"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="功能介绍"/>
+
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:src="@android:drawable/star_big_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="GPS追踪：#*location*#"
+            style="@style/text_content_style"
+            android:layout_width="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:src="@android:drawable/star_big_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="GPS追踪：#*alarm*#"
+            style="@style/text_content_style"
+            android:layout_width="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:src="@android:drawable/star_big_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="GPS追踪：#*wipedata*#"
+            style="@style/text_content_style"
+            android:layout_width="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:src="@android:drawable/star_big_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="GPS追踪：#*lockscreen*#"
+            style="@style/text_content_style"
+            android:layout_width="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

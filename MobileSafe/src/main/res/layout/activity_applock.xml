@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:background="#0281D9"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_applock_unlock"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:background="@drawable/tab_left_pressed"
+            android:text="未加锁"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_applock_lock"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:background="@drawable/tab_right_default"
+            android:text="已加锁"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:id="@+id/tv_applock_unlockappcount"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="20px"
+        android:text="未加锁应用"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_applock_unlock"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ListView
+                android:id="@+id/lv_applock_unlocklist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_applock_lock"
+            android:visibility="invisible"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_applock_locklist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_applock_loading"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ProgressBar
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/progressbar_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="正在拼命加载中...."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:paddingLeft="20px"
+            android:id="@+id/tv_applock_status"
+            android:textColor="#ffffff"
+            android:background="#ff888888"
+            android:text="用户应用(未加锁)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="invisible"
+            android:paddingLeft="20px"
+            android:id="@+id/tv_applock_lockstatus"
+            android:textColor="#ffffff"
+            android:background="#ff888888"
+            android:text="用户应用(已加锁)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
